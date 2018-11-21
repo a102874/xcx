@@ -1,0 +1,83 @@
+<view class="header-top">
+	<view class='header-city'><text style="font-size:35rpx;">郑州</text><image src="/images/city_06.png" style="width:35rpx;height:35rpx;"></image></view>
+
+    <view class='header-title' style="font-size:35rpx;text-align: center;">和联车</view>
+    <view class='header-right' ><image class="message"  src="/images/message_03.png" style="width:40rpx;height:40rpx;"></image></view>
+</view>
+	
+
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
+      <block wx:for="{{movies}}" wx:for-index="index"  wx:key="ListId">  
+        <swiper-item>  
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>  
+        </swiper-item>  
+      </block>  
+</swiper>
+<view class='header-hd'></view>
+<view class="notice"><view class='notic-title'>和联车</view><view class='notic-top'>头条</view>
+<swiper class='notic-cotent'  vertical="true" autoplay="true" interval="3000" duration="1000">
+ <block wx:for="{{title}}" wx:for-index="index"  wx:key="ListId">  
+        <swiper-item>  
+         <text>{{item.text}}</text>
+        </swiper-item>  
+      </block>  
+
+</swiper>
+</view>
+<view class='header-hd'></view>
+<view class='cate'>
+<view class='cate-img'  bindtap="shop_list">
+
+<image class='cate-image'  src='/images/index_27.png' width="100rpx"></image>
+<text class='cate-title'>新车商家</text>
+
+</view>
+<view class='cate-img'>
+<image class='cate-image' src='/images/index_26.png' width="100rpx"></image>
+<text class='cate-title'>二手车商家</text>
+</view>
+<view class='cate-img'>
+<image class='cate-image' src='/images/index_25.png' width="100rpx"></image>
+<text class='cate-title'>特惠购车</text>
+</view>
+</view>
+
+
+
+<view class='cate' >
+<view class='cate-img'>
+<image class='cate-image'  src='/images/index_24.png' width="100rpx"></image>
+<text class='cate-title'>预约服务</text>
+</view>
+<view class='cate-img'>
+<image class='cate-image' src='/images/index_23.png' width="100rpx"></image>
+<text class='cate-title'>汽车保养</text>
+</view>
+<view class='cate-img'>
+<image class='cate-image' src='/images/index_22.png' width="100rpx"></image>
+<text class='cate-title'>汽车维修</text>
+</view>
+</view>
+<view class='header-hd'></view>
+<view class='care-top'>|好车推荐</view>
+
+ <view class="container" style="padding:0rpx">
+    <!--垂直滚动，这里必须设置高度-->
+     <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" 
+          class="list" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad"  bindscroll="scroll">
+         <view class="item" wx:for="{{list}}" wx:key="ListId">
+             <image class="img" src="http://api.helianche.cn/{{item.smeta.thumb}}"  mode="aspectFill"></image>
+             <view class="text">
+                 <text class="title">{{item.name}}</text>
+                 <text class="description">{{item.brand}}</text>
+                   <view class="price">￥<text class='care-pt'>{{item.official_price}}</text>万元</view>
+             </view>
+         </view>
+     </scroll-view>
+    
+      </view>
+
+
+
+
+

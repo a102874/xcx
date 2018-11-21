@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/hl/hl",
+   "pages/shop/shop",
+   
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/shop_detail/shop_detail"
+    
+    
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "和联车",
+    "navigationBarTextStyle":"black",
+      "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/bottom_06.png",
+        "iconPath": "images/bottom_06.png",
+        "pagePath": "pages/hl/hl",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/bottom_05.png",
+        "iconPath": "images/bottom_05.png",
+        "pagePath": "pages/logs/logs",
+        "text": "合作商家"
+      },
+      {
+        "selectedIconPath": "images/bottom_07.png",
+        "iconPath": "images/bottom_07.png",
+        "pagePath": "pages/index/index",
+        "text": "活动"
+      },
+      {
+        "selectedIconPath": "images/bottom_09.png",
+        "iconPath": "images/bottom_09.png",
+        "pagePath": "pages/hl/hl",
+        "text": "我的"
+      }
+
+      
+    ]
+  }
+}

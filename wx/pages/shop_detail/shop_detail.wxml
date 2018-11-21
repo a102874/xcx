@@ -1,0 +1,59 @@
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
+      <block wx:for="{{movies}}" wx:for-index="index"  wx:key="ListId">  
+        <swiper-item>  
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>  
+        </swiper-item>  
+      </block>  
+</swiper>
+
+<view class='info'>
+<view class='info_text'>河南宝信二手车销售中心</view>
+<view class='info_text'>门店类型：新车</view>
+<view class='info_text'>主营业务：奔驰、宝马、</view>
+<view class='info_text'>地址：河南省郑州市大学路东</view>
+</view>
+
+
+
+<view class="shop_top">
+<view  class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">汽车</view>
+<view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">热门活动</view>
+</view>
+
+<swiper current="{{currentTab}}" duration="300" bindchange="swiperTab" style="height:{{scrollHeight}}px;">
+
+<swiper-item   >
+ <selector selectData="{{position}}"></selector>
+      <view class="container" style="padding:0rpx" >
+    <!--垂直滚动，这里必须设置高度-->
+     <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" class="list" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad"  bindscroll="scroll">
+         <view class="item" wx:for="{{product}}" wx:key="ListId">
+             <image class="img" src="http://api.helianche.cn/{{item.smeta.thumb}}"  mode="aspectFill"></image>
+             <view class="text">
+                 <text class="title">{{item.name}}</text>
+                 <text class="description">{{item.brand}}</text>
+                     <view class="price">￥<text class='care-pt'>{{item.official_price}}</text>万元</view>
+             </view>
+         </view>
+     </scroll-view>
+    
+      </view>
+</swiper-item>
+
+<swiper-item  >
+<view class="container" style="padding:0rpx">
+    <!--垂直滚动，这里必须设置高度-->
+     <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" class="list" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad"  bindscroll="scroll">
+         <view class="item_active"   bindtap="shop_list" wx:for="{{list}}" wx:key="ListId">
+           <view class="active_image" style='width:100%'>
+             <image class="act_img" src="http://api.helianche.cn/{{item.thumb}}"  mode="aspectFill"></image>
+               </view>
+             <view class="act_text">
+                 <text class="title">{{item.title}}</text>       
+             </view>
+         </view>
+     </scroll-view>
+    
+      </view>
+</swiper-item>
+      </swiper>

@@ -1,0 +1,186 @@
+/**index.wxss**/
+.header-top{
+ width: 100%;
+ height: 2rPX;
+ display: flex;
+}
+
+.header-city{
+width: 20%;
+}
+.header-title{
+width: 60%;
+}
+.header-right{
+  display: flex;
+flex-direction:row-reverse;
+  width: 20%;
+}
+.swiper {
+  height: 300rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+
+
+.notice{
+display: flex;
+width: 100%;
+height: 50rpx;
+margin-top:20rpx;
+vertical-align: center;
+
+}
+
+.notic-title{
+  width: 20%;
+color: #ff6f01;
+font-size: 40rpx;
+margin-left: 40rpx;
+line-height: 50rpx;
+}
+.notic-top{
+   width: 15%;
+  color:black;
+  font-weight:bold;
+  line-height: 50rpx; 
+}
+.notic-cotent{
+  width: 70%;
+  text-align: center;
+  font-size: 30rpx;
+  height: 50rpx;
+  
+  text-overflow:ellipsis;
+}
+.cate{
+width: 100%;
+height: 120rpx;
+margin-top: 20rpx;
+display: flex;
+justify-content:center;
+}
+.cate-img{
+  width: 33.3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+.cate-image{
+ width: 50rpx;
+ height: 50rpx;
+ display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap:wrap-reverse;
+}
+.cate-title{
+  font-size: 30rpx;
+  width: 100%;
+  text-align: center;
+}
+.header-hd{
+width:100%;
+height:15rpx;
+background-color:whitesmoke
+}
+.care-top{
+margin-left: 20rpx;
+color: #ff6f01;
+}
+
+.container{
+    height: 100%;  
+}
+ 
+.item{
+  width:100%;
+ display: flex; 
+ height: 200rpx; 
+}
+ 
+ 
+.text{
+    flex-shrink:1;
+    flex-grow:1;
+    flex-direction: row;
+    padding: 5rpx;
+    flex-wrap: wrap;
+    font-size: 30rpx;
+    margin-left: 230rpx;
+}
+ 
+.title{
+    font-size: 50rpx;
+    margin:10rpx 100rpx 10rpx 100rpx;
+}
+.description{
+    font-size: 30rpx;
+}
+.userinfo {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .userinfo-avatar {
+  width: 128rpx;
+   height: 128rpx;
+   margin: 20rpx;
+ }
+
+  .userinfo-nickname {
+   color: #aaa;
+ }
+ 
+ .usermotto {
+   margin-top: 200px;
+ }
+
+ /**/
+ 
+ scroll-view {
+   width: 100%;
+ }
+ 
+ .item {
+   width: 90%;
+   height: 200rpx;
+   margin: 20rpx auto;
+   display: inline-block;
+ }
+ 
+.img {
+   width: 200rpx;
+   height: 200rpx;
+   float: left;
+   
+ }
+ 
+ .title {
+   font-size: 30rpx;
+   display: block;
+   margin: 20rpx auto;
+ }
+ 
+ .description {
+   font-size: 26rpx;
+   line-height: 15rpx;
+ }
+ .price{
+   margin-top: 30rpx;
+   display: block;
+  font-size: 26rpx;
+   line-height: 15rpx;
+ }
+
+ .care-pt{
+  
+  color:#ff6f01;
+   font-size: 36rpx;
+ }
